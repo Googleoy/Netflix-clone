@@ -50,7 +50,7 @@ jobs:
             run: trivy image gitya/netflix:latest
 
           - name: Run the container netflix
-            run: docker run -d --name netflix -p 8081:80 gitya:netflix:latest
+            run: docker run -d --name netflix -p 8081:80 gitya/netflix:latest
           
          
       
