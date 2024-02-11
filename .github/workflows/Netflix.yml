@@ -35,7 +35,7 @@ jobs:
           # run commands to build and push docker images
             docker build --build-arg TMDB_V3_API_KEY=7fb617e8853393994aea60297c588763 -t netflix .
             docker tag netflix gitya/netflix:latest
-            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p $ {{ secrers.DOCKERHUB.TOKEN }}
+            docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
             docker push gitya/netflix:latest
         env:
              DOCKER_CLI_ACI: 1
